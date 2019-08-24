@@ -27,3 +27,38 @@ longestConsecutive(['hi', 'marbles', 'mittens', 'bye', 'lorem', 'ipsum', 'to', '
 // longestConsecutive(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2); // --> "abigailtheta"
 
 //  next steps : firgure out how to refactor code with any built in JS functions 
+
+// OTHER WAYS TO SOLVE: 
+
+/*
+function longestConsecutive(array, k) {
+    let newStr = ""; 
+    for (i = 0; i < array.length; i++) {
+        let tempStr = array.slice(i, i+k).join("");
+            if(newStr.length < tempStr.length)
+                newStr = tempStr; 
+             };   
+    return newStr;  
+}; 
+
+*/
+
+// using forEach() 
+/*
+refactor the for loop: 
+
+getLongestString(array, k){
+    let longestStr = ""; 
+    arr.forEach( (str, index, array) 
+        => { let currentStr =  arr.slice(i, i+k).join("");   //- replaces comma with nothing to concatenate the string - 
+            
+            if (currentStr.length > longestStr.length) {
+                longestStr = currentStr
+            }     
+            return longestStr 
+    })
+
+
+    )
+}
+*/
