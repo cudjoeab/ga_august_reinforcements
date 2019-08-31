@@ -61,7 +61,7 @@ for person in project['committee']:
 
 tasks = []
 while len(project['steps']) < 3: 
-    random.choice(people) 
+    random.choice(random.choice(people)) 
 
 
 
